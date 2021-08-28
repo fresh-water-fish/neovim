@@ -18,18 +18,17 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-tree.lua'
     use 'glepnir/galaxyline.nvim'
     use 'akinsho/nvim-bufferline.lua'
-    use 'hoob3rt/lualine.nvim'
-    -- Prettier 
+    use 'nvim-telescope/telescope.nvim'
+
+    -- Prettier
     --use {'lukas-reineke/indent-blankline.nvim', branch = "lua"}
     use 'kyazdani42/nvim-web-devicons'
-    use 'siduck76/nvim-base16.lua'
+    use 'EdenEast/nightfox.nvim'
     use 'norcalli/nvim-colorizer.lua'
 
     -- Language and autocomplete
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'hrsh7th/nvim-compe'
-
-    -- LSP 
     use 'neovim/nvim-lspconfig'
 
 end)

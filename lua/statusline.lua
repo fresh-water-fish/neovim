@@ -4,14 +4,14 @@ local gls = gl.section
 gl.short_line_list = {" "}
 
 local colors = {
-    bg = "#22262e",
-    fg = "#abb2bf",
-    green = "#82ad63",
-    red = "#d47d85",
-    lightbg = "#2d3139",
-    lightbg2 = "#262a32",
-    blue = "#7797b7",
-    yellow = "#e0c080",
+    bg = "#292c34",
+    fg = "#b9bfca",
+    green = "#a3be8c",
+    red = "#bf616a",
+    lightbg = "#3b4252",
+    lightbg2 = "#2e3440",
+    blue = "#81a1c1",
+    yellow = "#ebcb8b",
     grey = "#6f737b"
 }
 

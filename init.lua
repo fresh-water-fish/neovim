@@ -4,9 +4,10 @@ require'settings'
 
  -- Information
 require'nvimtree'
---require'statusline'
-require'luastatusline'
+require'statusline'
+--require'luastatusline'
 require'topbufferline'
+--require'telescopenvim'
 
  -- Prettier
 require'colorscheme'
@@ -19,6 +20,7 @@ require'nvimcompe'
 
  -- Language Server Protocols
 --require('lsp.bash-ls')
+require('lsp.c-ls')
 require('lsp.haskell-ls')
 --require('lsp.latex-ls')
 require('lsp.lua-ls')
@@ -27,4 +29,5 @@ require('lsp.rust-ls')
 --require('lsp.yaml-ls')
 
  -- at end to ensure overriding of other plugins
-require('mappings')
+require('mykeymappings')
+
