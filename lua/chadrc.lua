@@ -8,7 +8,7 @@ M.ui = {
    italic_comments = false,
 
    -- theme to be used, to see all available themes, open the theme switcher by <leader> + th
-   theme = "onedark",
+   theme = "gruvchad",
 
    -- theme toggler, toggle between two themes, see theme_toggleer mappings
    theme_toggler = {
@@ -53,15 +53,15 @@ M.options = {
    -- relative numbers in normal mode tool at the bottom of options.lua
    numberwidth = 2,
    permanent_undo = true,
-   shiftwidth = 2,
+   shiftwidth = 4,
    smartindent = true,
-   tabstop = 8, -- Number of spaces that a <Tab> in the file counts for
+   tabstop = 4, -- Number of spaces that a <Tab> in the file counts for
    timeoutlen = 400,
-   relativenumber = false,
+   relativenumber = true,
    ruler = false,
    updatetime = 250,
    -- used for updater
-   update_url = "https://github.com/NvChad/NvChad",
+   update_url = "https://github.com/fresh-water-fish/NvChad",
    update_branch = "main",
 }
 
