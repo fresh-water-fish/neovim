@@ -69,6 +69,66 @@ for _, lsp in ipairs(servers) do
    }
 end
 
+local sumneko_root_path = vim.fn.stdpath('cache')..'/lspconfig/sumneko_lua/lua_language_server'
+local sumneko_binary = "/bin/lua-language-server"
+require'lspconfig'.sumneko_lua.setup{
+    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"},
+    settings = {
+        Lua = {
+            runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT',
+            -- Setup your lua path
+            path = runtime_path,
+            },
+            diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = {'vim'},
+            },
+            workspace = {
+            -- Make the server aware of Neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true),
+            },
+            telemetry = {
+                enable = false,
+            },
+        },
+    },
+}
+
+require'lspconfig'.rls.setup {
+    cmd = {"rust-analyzer"},
+    filetypes = {"rust"},
+}
+
+require'lspconfig'.ccls.setup {
+  init_options = {
+    compilationDatabaseDirectory = "build";
+    index = {
+      threads = 0;
+    };
+    clang = {
+      excludeArgs = { "-frounding-math"} ;
+    };
+  }
+}
+
+require'lspconfig'.pyright.setup {
+    cmd = {"pyright-langserver", "--stdio"},
+    filetypes = {"python"},
+}
+
+require'lspconfig'.hls.setup {
+    cmd = {"haskell-language-server-wrapper", "--lsp"},
+    filetypes = {"haskell", "lhaskell"},
+    lspinfo = function (cfg)
+        if cfg.settings.languageServerHaskell.logFile then
+            return "logfile: "..cfg.settings.languageServerHaskell.logFile
+        end
+        return ""
+    end;
+}
+
 -- require("anyfile").setup_luaLsp(on_attach, capabilities) -- this will be removed soon after the custom hooks PR
 
 -- replace the default lsp diagnostic symbols
