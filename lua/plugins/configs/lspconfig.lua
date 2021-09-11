@@ -129,6 +129,10 @@ require'lspconfig'.hls.setup {
     end;
 }
 
+require'lspconfig'.java_language_server.setup{
+    cmd ={"java-language-server"},
+}
+
 -- require("anyfile").setup_luaLsp(on_attach, capabilities) -- this will be removed soon after the custom hooks PR
 
 -- replace the default lsp diagnostic symbols
