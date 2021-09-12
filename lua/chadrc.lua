@@ -61,7 +61,7 @@ M.options = {
    ruler = false,
    updatetime = 250,
    -- used for updater
-   update_url = "https://github.com/fresh-water-fish/NvChad",
+   update_url = "https://github.com/sebmentation-fault/NvChad",
    update_branch = "main",
 }
 
